@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 14:37:31 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/03 14:57:37 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/03 18:41:13 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ int			chk_size(int n)
 {
 	int		i;
 
-	i = 10;
-	while (n / i != 0)
+	i = 1000000000;
+	while (n / i == 0)
 	{
-		i *= 10;
+		i /= 10;
 	}
-	return (i / 10);
+	return (i);
 }
 
 void		print_integer(int n)
