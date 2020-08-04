@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/04 23:32:16 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/04 23:53:08 by hyunjuki         ###   ########.fr       */
+/*   Created: 2020/08/04 23:51:11 by hyunjuki          #+#    #+#             */
+/*   Updated: 2020/08/04 23:52:46 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (*(str + i) != '\0')
 	{
-		if (*(str + i) >= 'a' && *(str + i) <= 'z')
-			*(str + i) -= 32;
+		if (*(str + i) >= 'A' && *(str + i) <= 'Z')
+			*(str + i) += 32;
 		i++;
 	}
 	return (str);
