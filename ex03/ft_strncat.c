@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:38:23 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/05 20:43:43 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/05 21:35:55 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char				*ft_strncat(char *dest, char *src, unsigned int nb)
 	j = 0;
 	while (*(dest + i) != '\0')
 		i++;
-	while (*src != '\0' && j < nb)
+	while (*src != '\0' && j < nb - 1)
 	{
 		*(dest + i) = *src;
 		src++;
@@ -27,4 +27,5 @@ char				*ft_strncat(char *dest, char *src, unsigned int nb)
 		j++;
 	}
 	*(dest + i) = '\0';
+	return (dest);
 }
