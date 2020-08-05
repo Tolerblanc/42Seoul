@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/05 16:40:44 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/05 20:37:18 by hyunjuki         ###   ########.fr       */
+/*   Created: 2020/08/05 20:35:50 by hyunjuki          #+#    #+#             */
+/*   Updated: 2020/08/05 20:35:57 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int					ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strcat(char *dest, char *src)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (i < n && *(s1 + i) != '\0' && *(s2 + i) != '\0')
-	{
-		if (*(s1 + i) > *(s2 + i))
-			return (1);
-		if (*(s1 + i) < *(s2 + i))
-			return (-1);
+	while (*(dest + i) != '\0')
 		i++;
-	}
-	if (i < n && (*(s1 + i) == '\0' || *(s2 + i) == '\0'))
+	while (*src != '\0')
 	{
-		if (*(s1 + i) > *(s2 + i))
-			return (1);
-		if (*(s1 + i) < *(s2 + i))
-			return (-1);
+		*(dest + i) = *src;
+		i++;
+		src++;
 	}
-	return (0);
+	*(dest + i) = '\0';
+	return (dest);
 }
