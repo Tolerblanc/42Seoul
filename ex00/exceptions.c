@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 15:25:45 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 18:50:51 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 21:27:30 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ int				except(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		write(1, "Error0 : invalid arguments", 27);
+		write(1, "Error0 : invalid arguments\n", 28);
 		return (1);
 	}
 	if (ft_strlen(argv[1]) != 31)
 	{
-		write(1, "Error1 : invalid arguments", 27);
+		write(1, "Error1 : invalid arguments\n", 28);
 		return (1);
 	}
 	if (chk_args(argv[1]))
 	{
-		write(1, "Error2 : invalid arguments", 27);
+		write(1, "Error2 : invalid arguments\n", 28);
 		return (1);
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:11:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 21:20:18 by chelee           ###   ########.fr       */
+/*   Updated: 2020/08/08 21:27:31 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int				main(int argc, char *argv[])
 	make_case();
 	dfs_map(0);
 	if (g_result != 0)
-		write(1, "There is no such case :(", 24);
+		write(1, "Error : There is no such case :(\n", 33);
 	return (0);
 }
 
