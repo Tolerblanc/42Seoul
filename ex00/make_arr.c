@@ -79,41 +79,27 @@ int				test_func(int row)
 void			dfs_map(int cnt)
 {
 	int			i;
-	int			result;
 
-	if (g_result == 0)
+	if ((cnt > 1 && test_func(cnt)) || g_result == 0)
 		return ;
-	if (cnt > 1)
-	{
-		result = test_func(cnt);
-		if (result)
-			return ;
-	}
 	if (cnt == 4)
 	{
-		g_cnt++;
 		g_result = chk_arr(g_map, g_args);
 		if (g_result == 1)
-		{
 			prt_arr(g_map);
-		}
 		return ;
 	}
 	i = 0;
 	while (i < 24)
 	{
-		if (g_map_select[i] == 1)
-		{
-			i++;
+		if (g_map_select[i++] == 1)
 			continue ;
-		}
-		g_map_select[i] = 1;
+		g_map_select[--i] = 1;
 		push_map(g_map, g_case, i);
 		dfs_map(cnt + 1);
 		if (g_result == 1)
 			return ;
 		pop_map(g_map);
-		g_map_select[i] = 0;
-		i++;
+		g_map_select[i++] = 0;
 	}
 }
