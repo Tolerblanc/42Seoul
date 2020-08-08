@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:11:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 19:49:55 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 20:07:24 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int				main(int argc, char *argv[])
 	g_result = -1;
 	init_map();
 	make_case();
-	/* TODO: free allocation */
 	dfs_map(0);
 	//free(g_map);
 	return (0);

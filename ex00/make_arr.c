@@ -6,11 +6,10 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:12:18 by chelee            #+#    #+#             */
-/*   Updated: 2020/08/08 19:54:21 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 20:44:36 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 
 extern int		g_case[24][4];
@@ -23,16 +22,15 @@ extern void		prt_arr(int **arr);
 
 int				**g_map;
 int				g_map_select[24];
-int				g_cnt;
 int				g_result;
 
 void			init_map(void)
 {
 	int			i;
 
-	g_map = malloc(sizeof(int *) * 4);
 	i = 0;
-	g_cnt = 0;
+	g_map = malloc(sizeof(int *) * 4);
+	g_result = -1;
 	while (i < 4)
 	{
 		g_map[i] = malloc(sizeof(int *));
@@ -47,7 +45,7 @@ void			init_map(void)
 	}
 }
 
-int				test_func(int row)
+int				chk_dup(int row)
 {
 	int			i;
 	int			j;
@@ -80,7 +78,7 @@ void			dfs_map(int cnt)
 {
 	int			i;
 
-	if ((cnt > 1 && test_func(cnt)) || g_result == 0)
+	if ((cnt > 1 && chk_dup(cnt)) || g_result == 0)
 		return ;
 	if (cnt == 4)
 	{
