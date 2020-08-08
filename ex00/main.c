@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:11:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 21:15:11 by chelee           ###   ########.fr       */
+/*   Updated: 2020/08/08 21:20:18 by chelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 void			init_args(char *input, int *output);
-void 			free_allo(void);
+void			free_allo(void);
 extern int		except(int argc, char *argv[]);
 extern void		init_map(void);
 extern void		make_case(void);
