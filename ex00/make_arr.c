@@ -6,23 +6,23 @@
 /*   By: chelee <chelee@42seoul.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:12:18 by chelee            #+#    #+#             */
-/*   Updated: 2020/08/08 14:12:22 by chelee           ###   ########.fr       */
+/*   Updated: 2020/08/08 18:19:36 by chelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-extern int g_case[24][4];
-extern void make_case(void);
+extern int		g_case[24][4];
+extern void		make_case(void);
 
-int **g_map;
-int g_map_select[24];
-int g_cnt;
+int				**g_map;
+int				g_map_select[24];
+int				g_cnt;
 
-void init_map(void)
+void			init_map(void)
 {
-	int i;
+	int			i;
 
 	g_map = malloc(sizeof(int *) * 4);
 	i = 0;
@@ -39,27 +39,35 @@ void init_map(void)
 		g_map_select[i] = 0;
 		i++;
 	}
-	
 }
 
-void	show(void)
+void			show(void)
 {
-	for(int i=0; i<4; i++)
+	int			i;
+	int			j;
+
+	i = 0;
+	j = 0;
+	while (i < 4)
 	{
-		for(int j=0; j<4; j++)
+		while (j < 4)
 		{
 			if (g_map[i][j] < 1 || g_map[i][j] > 4)
 			{
 				printf("error: %d", g_map[i][j]);
 				return ;
 			}
+			j++;
 		}
+		i++;
 	}
 }
 
-void push_map(int value)
+void			push_map(int value)
 {
-	int i = 0;
+	int			i;
+
+	i = 0;
 	while (i < 4)
 	{
 		if (g_map[i] == (void *)0)
@@ -71,13 +79,14 @@ void push_map(int value)
 		{
 			i++;
 		}
-		
 	}
 }
 
-void pop_map(void)
+void			pop_map(void)
 {
-	int i = 3;
+	int			i;
+
+	i = 3;
 	while (i >= 0)
 	{
 		if (g_map[i] != (void *)0)
@@ -89,61 +98,55 @@ void pop_map(void)
 		{
 			i--;
 		}
-		
 	}
 }
 
-int test_func(int row)
+int				test_func(int row)
 {
-	int dup[4];
-	int value;
+	int			dup[4];
+	int			value;
 
-	for (int i=0; i<4; i++)
+	for (int i = 0; i<4; i++)
 	{
 		dup[0] = 0;
 		dup[1] = 0;
 		dup[2] = 0;
 		dup[3] = 0;
-		for (int j=0; j<row; j++)
+		for(int j=0; j<row; j++)
 		{
 			value = g_map[j][i];
 			value -= 1;
 			if (dup[value] == 1)
-			{
-				return 1;
-			}
+				return (1);
 			dup[value] = 1;
 		}
 	}
-	return 0;
+	return (0);
 }
 
-void dfs_map(int cnt)
+void			dfs_map(int cnt)
 {
-	int i;
-	//int duplicate[4];
+	int			i;
+	int			result;
 
 	if (cnt == 4)
-	{		
-		// 검사함
+	{
 		g_cnt++;
 		return ;
 	}
-
 	if (cnt > 1)
 	{
-		int result = test_func(cnt);
-		if(result)
+		result = test_func(cnt);
+		if (result)
 			return ;
 	}
-	
 	i = 0;
 	while (i < 24)
 	{
 		if (g_map_select[i] == 1)
 		{
 			i++;
-			continue;
+			continue ;
 		}
 		g_map_select[i] = 1;
 		push_map(i);
@@ -154,12 +157,20 @@ void dfs_map(int cnt)
 	}
 }
 
-int main(void)
+int				main(void)
 {
 	init_map();
 	make_case();
+	/*
+	for (int i=0; i<24; i++)
+	{
+		for (int j=0; j<4; j++)
+		{
+			printf("%d ", g_case[i][j]);
+		}
+		printf("\n");
+	}*/
 	dfs_map(0);
-	
 	free(g_map);
 	printf("%d", g_cnt);
 }
