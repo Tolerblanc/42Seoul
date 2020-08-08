@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 15:25:48 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 18:20:06 by chelee           ###   ########.fr       */
+/*   Updated: 2020/08/08 18:23:31 by chelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void		pop_arr(int *arr)
 	}
 }
 
-void		push_map(int **map, int **arr_case, int value)
+void		push_map(int **map, int arr_case[24][4], int value)
 {
 	int		i;
 
