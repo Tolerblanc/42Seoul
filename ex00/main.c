@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:11:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 19:11:58 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 19:35:04 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ extern int		except(int argc, char *argv[]);
 extern void		init_map(void);
 extern void		make_case(void);
 extern void		dfs_map(int cnt);
+extern void		prt_arr(int **arr);
 extern int		g_result;
+extern int		g_map;
 int				g_args[16];
 
 int				main(int argc, char *argv[])
@@ -32,6 +34,7 @@ int				main(int argc, char *argv[])
 	/* TODO: free allocation */
 	dfs_map(0);
 	//printf("%d", g_cnt);
+	prt_arr(g_map);
 	return (0);
 }
 
