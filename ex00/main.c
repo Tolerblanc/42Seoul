@@ -18,7 +18,7 @@ extern int		except(int argc, char *argv[]);
 extern void		init_map(void);
 extern void		make_case(void);
 extern void		dfs_map(int cnt);
-extern void		prt_arr(int **arr);
+//extern void		prt_arr(int **arr);
 extern int		g_result;
 extern int		g_map;
 int				g_args[16];
@@ -34,7 +34,7 @@ int				main(int argc, char *argv[])
 	/* TODO: free allocation */
 	dfs_map(0);
 	//printf("%d", g_cnt);
-	prt_arr(g_map);
+	//prt_arr(g_map);
 	return (0);
 }
 
