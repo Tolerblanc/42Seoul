@@ -6,13 +6,15 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:11:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 21:06:51 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 21:15:11 by chelee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <unistd.h>
 
 void			init_args(char *input, int *output);
+void 			free_allo(void);
 extern int		except(int argc, char *argv[]);
 extern void		init_map(void);
 extern void		make_case(void);
@@ -30,8 +32,19 @@ int				main(int argc, char *argv[])
 	init_map();
 	make_case();
 	dfs_map(0);
-	//free(g_map);
+	if (g_result != 0)
+		write(1, "There is no such case :(", 24);
 	return (0);
+}
+
+void			free_allo(void)
+{
+	free(g_map[0]);
+	free(g_map[1]);
+	free(g_map[2]);
+	free(g_map[3]);
+	free(g_map);
+	return ;
 }
 
 void			init_args(char *input, int *output)
