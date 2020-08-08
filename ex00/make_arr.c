@@ -14,13 +14,16 @@
 #include <stdlib.h>
 
 extern int		g_case[24][4];
+extern int		g_args[16];
 extern void		make_case(void);
 extern void		push_map(int **map, int arr_case[24][4], int value);
 extern void		pop_map(int **map);
+extern int		chk_arr(int arr[][4],int chk[]);
 
 int				**g_map;
 int				g_map_select[24];
 int				g_cnt;
+int				g_result;
 
 void			init_map(void)
 {
@@ -39,28 +42,6 @@ void			init_map(void)
 	while (i < 24)
 	{
 		g_map_select[i] = 0;
-		i++;
-	}
-}
-
-void			show(void)
-{
-	int			i;
-	int			j;
-
-	i = 0;
-	j = 0;
-	while (i < 4)
-	{
-		while (j < 4)
-		{
-			if (g_map[i][j] < 1 || g_map[i][j] > 4)
-			{
-				printf("error: %d", g_map[i][j]);
-				return ;
-			}
-			j++;
-		}
 		i++;
 	}
 }
@@ -99,10 +80,12 @@ void			dfs_map(int cnt)
 	int			i;
 	int			result;
 
+	if (g_result == 0)
+		return ;
 	if (cnt == 4)
 	{
 		g_cnt++;
-		/* test */
+		g_result = chk_arr(g_map, g_args);
 		return ;
 	}
 	if (cnt > 1)
