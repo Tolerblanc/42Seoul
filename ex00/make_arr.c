@@ -85,7 +85,7 @@ void			dfs_map(int cnt)
 	if (cnt == 4)
 	{
 		g_result = chk_arr(g_map, g_args);
-		if (g_result == 1)
+		if (g_result == 0)
 			prt_arr(g_map);
 		return ;
 	}
@@ -97,7 +97,7 @@ void			dfs_map(int cnt)
 		g_map_select[--i] = 1;
 		push_map(g_map, g_case, i);
 		dfs_map(cnt + 1);
-		if (g_result == 1)
+		if (g_result == 0)
 			return ;
 		pop_map(g_map);
 		g_map_select[i++] = 0;
