@@ -6,16 +6,16 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 17:21:08 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 19:11:56 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 19:29:06 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		chk_col(int arr[][4], int chk[]);
-int		chk_row(int arr[][4], int chk[]);
+int		chk_col(int **arr, int chk[]);
+int		chk_row(int **arr, int chk[]);
 int		chk_front_line(int arr[], int n);
 int		chk_back_line(int arr[], int n);
 
-int		chk_arr(int arr[][4], int chk[])
+int		chk_arr(int **arr, int chk[])
 {
 	if (chk_col(arr, chk) || chk_row(arr, chk))
 	{
@@ -27,7 +27,7 @@ int		chk_arr(int arr[][4], int chk[])
 	}
 }
 
-int		chk_col(int arr[][4], int chk[])
+int		chk_col(int **arr, int chk[])
 {
 	int	i;
 	int	j;
@@ -51,7 +51,7 @@ int		chk_col(int arr[][4], int chk[])
 	return (0);
 }
 
-int		chk_row(int arr[][4], int chk[])
+int		chk_row(int **arr, int chk[])
 {
 	int	i;
 	int	j;
