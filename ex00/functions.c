@@ -6,19 +6,19 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 15:25:48 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 15:35:17 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 18:51:43 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
-    int len;
+	int	len;
 
-    len = 0;
-    while(*str != '\0')
-    {
-        len++;
-        str++;
-    }
-    return (len);
+	len = 0;
+	while (*str != '\0')
+	{
+		len++;
+		str++;
+	}
+	return (len);
 }
