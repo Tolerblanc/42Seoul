@@ -6,12 +6,11 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:11:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 20:07:24 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 21:06:51 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void			init_args(char *input, int *output);
 extern int		except(int argc, char *argv[]);
@@ -28,7 +27,6 @@ int				main(int argc, char *argv[])
 	if (except(argc, argv))
 		return (1);
 	init_args(argv[1], g_args);
-	g_result = -1;
 	init_map();
 	make_case();
 	dfs_map(0);
