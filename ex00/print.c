@@ -6,22 +6,22 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 19:15:17 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/08 19:35:05 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 19:53:02 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    	prt_arr(int **arr)
+void		prt_arr(int **arr)
 {
-	int 	i;
+	int		i;
 	int		j;
 	char	c;
 
 	i = 0;
-	j = 0;
 	while (i < 4)
 	{
+		j = 0;
 		while (j < 4)
 		{
 			c = arr[i][j] + '0';

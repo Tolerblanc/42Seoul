@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   make_arr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chelee <chelee@42seoul.fr>                 +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 14:12:18 by chelee            #+#    #+#             */
-/*   Updated: 2020/08/08 18:26:17 by chelee           ###   ########.fr       */
+/*   Updated: 2020/08/08 19:54:21 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ extern int		g_args[16];
 extern void		make_case(void);
 extern void		push_map(int **map, int arr_case[24][4], int value);
 extern void		pop_map(int **map);
-extern int		chk_arr(int **arr,int chk[]);
+extern int		chk_arr(int **arr, int chk[]);
+extern void		prt_arr(int **arr);
 
 int				**g_map;
 int				g_map_select[24];
@@ -75,18 +76,6 @@ int				test_func(int row)
 	return (0);
 }
 
-void			show(void)
-{
-	for(int i=0; i<4; i++)
-	{
-		for(int j=0; j<4; j++)
-		{
-			printf("%d ", g_map[i][j]);
-		}
-		printf("\n");
-	}
-}
-
 void			dfs_map(int cnt)
 {
 	int			i;
@@ -106,7 +95,7 @@ void			dfs_map(int cnt)
 		g_result = chk_arr(g_map, g_args);
 		if (g_result == 1)
 		{
-			show();
+			prt_arr(g_map);
 		}
 		return ;
 	}
