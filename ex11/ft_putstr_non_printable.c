@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 13:54:54 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/05 16:03:42 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/08 12:56:53 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,39 +20,23 @@ int			is_printable(char str)
 		return (0);
 }
 
-void		prt_hex(char arr[], int idx)
+char		dec2hex(int	n)
 {
-	write(1, "\\", 1);
-	while (idx >= 0)
-	{
-		write(1, &arr[idx], 1);
-		idx--;
-	}
+	if(n < 10)
+		return (n + '0');
+	else
+		return (n - 10 + 'a');
 }
 
 void		get_hex(char str)
 {
-	char	hex[42];
-	int		idx;
-	int		ascii;
-	int		mod;
+	char	ascii;
 
-	ascii = str;
-	idx = 0;
-	while (ascii != 0)
-	{
-		mod = ascii % 16;
-		if (mod < 10)
-			hex[idx] = mod + '0';
-		else
-			hex[idx] = mod - 10 + 'a';
-		ascii /= 16;
-		idx++;
-	}
-	if (idx == 1)
-		hex[idx++] = '0';
-	hex[idx] = '\0';
-	prt_hex(hex, idx - 1);
+	write(1,"\\",1);
+	ascii = dec2hex(str / 16 % 16);
+	write(1,&ascii,1);
+	ascii = dec2hex(str / 16);
+	write(1,&ascii,1);
 }
 
 void		ft_putstr_non_printable(char *str)
