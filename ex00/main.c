@@ -11,10 +11,14 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void			init_args(char *input, int *output);
 extern int		except(int argc, char *argv[]);
 extern int		chk_arr(int arr[][4],int chk[]);
+extern void		init_map(void);
+extern void		make_case(void);
+extern void		dfs_map(int cnt);
 
 int				g_args[16];
 
@@ -23,7 +27,11 @@ int				main(int argc, char *argv[])
 	if (except(argc, argv))
 		return (1);
 	init_args(argv[1], g_args);
-
+	init_map();
+	make_case();
+	/* TODO: free allocation */
+	dfs_map(0);
+	//printf("%d", g_cnt);
 	return (0);
 }
 

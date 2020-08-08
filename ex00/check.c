@@ -42,7 +42,7 @@ int		chk_col(int arr[][4], int chk[])
 			line[j] = arr[j][i];
 			j++;
 		}
-		if (chk_front_linear(line, chk[i]) || chk_back_linear(line, chk[i + 4]))
+		if (chk_front_line(line, chk[i]) || chk_back_line(line, chk[i + 4]))
 		{
 			return (1);
 		}

@@ -102,6 +102,7 @@ void			dfs_map(int cnt)
 	if (cnt == 4)
 	{
 		g_cnt++;
+		/* test */
 		return ;
 	}
 	if (cnt > 1)
@@ -125,13 +126,4 @@ void			dfs_map(int cnt)
 		g_map_select[i] = 0;
 		i++;
 	}
-}
-
-int				main(void)
-{
-	init_map();
-	make_case();
-	dfs_map(0);
-	free(g_map);
-	printf("%d", g_cnt);
 }
