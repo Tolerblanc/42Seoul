@@ -6,11 +6,11 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 21:39:23 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/10 17:05:29 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/10 17:08:48 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int			ft_strlen(char *str)
+unsigned int		ft_strlen(char *str)
 {
 	unsigned int	cnt;
 
