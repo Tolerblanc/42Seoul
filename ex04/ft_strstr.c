@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 20:48:32 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/10 13:57:56 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/10 16:53:25 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char		*chk_str(char *str, char *target, int idx, int target_length)
 	while (i < target_length && *(str + i) != '\0')
 	{
 		if (*(str + idx + i) != *(target + i))
-			return (0);
+			return ((void *)0);
 		i++;
 	}
-	return (i < target_length ? 0 : str + idx);
+	return (i < target_length ? ((void *)0) : str + idx);
 }
 
 char		*ft_strstr(char *str, char *to_find)
@@ -34,13 +34,15 @@ char		*ft_strstr(char *str, char *to_find)
 		return (str);
 	i = 0;
 	length = 0;
-	ret = 0;
+	ret = (void *)0;
 	while (*(to_find + length) != '\0')
 		length++;
 	while (*(str + i) != '\0')
 	{
 		if (*(str + i) == *to_find)
 			ret = chk_str(str, to_find, i, length);
+		if (ret != (void *)0)
+			break ;
 		i++;
 	}
 	return (ret);
