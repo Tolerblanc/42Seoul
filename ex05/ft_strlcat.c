@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 21:39:23 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/05 21:51:24 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/10 13:58:50 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int					ft_strlen(char *str)
 {
-	int	cnt;
+	int				cnt;
 
 	cnt = 0;
 	while (*str != '\0')
