@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 16:37:08 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 16:38:29 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/13 05:15:16 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int		ft_find_next_prime(int nb)
 {
 	while (1)
 	{
+		if (nb == 2147483647)
+			return (nb);
 		nb++;
 		if (ft_is_prime(nb))
 			return (nb);
