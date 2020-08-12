@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 15:29:39 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 15:58:42 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/12 23:45:49 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ unsigned int		power(unsigned int base, unsigned int pow)
 	unsigned int	i;
 	unsigned int	p;
 
+	if (pow == 0)
+		return (1);
 	i = 0;
 	p = base;
 	while (i < pow - 1)
@@ -79,6 +81,9 @@ void				prt_base(unsigned int n, char *base, unsigned int b_size)
 		n %= i;
 		n_size--;
 	}
+	i = power(b_size, n_size);
+	c = base[n / i];
+	write(1, &c, 1);
 }
 
 void				ft_putnbr_base(int nbr, char *base)
