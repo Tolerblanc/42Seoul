@@ -6,16 +6,31 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 19:49:09 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/10 19:49:09 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/12 12:33:03 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-unsigned int		ft_strlen(char *str)
+int		get_integer(char *str)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
+	int	res;
+
+	i = 0;
+	res = 0;
+	while (is_num(*(str + i)))
+	{
+		res = res * 10 + (*(str + i) - '0');
+		i++;
+	}
+	return (res);
+}
+
+int		ft_strlen(char *str)
+{
+	int	i;
+	int	j;
 
 	i = 0;
 	while (*(str + i) != '\0')
@@ -34,58 +49,49 @@ unsigned int		ft_strlen(char *str)
 	return (i);
 }
 
-int		is_space(char str)
+int		baseify(char *str, char *base, int size)
 {
-	if (str == '\t' || str == '\n' || str == '\v' ||
-			str == '\f' || str == '\r' || str == ' ')
-		return (1);
-	return (0);
-}
-
-int		is_sign(char str)
-{
-	if (str == '+')
-		return (1);
-	if (str == '-')
-		return (2);
-	return (0);
-}
-
-int		is_num(char str)
-{
-	if (str >= '0' && str <= '9')
-		return (1);
-	return (0);
-}
-
-int		get_integer(char *str)
-{
+	int	dec;
+	int res;
 	int	i;
-	int	res;
 
-	i = 0;
+	i = 1;
+	dec = 0;
 	res = 0;
-	while (is_num(*(str + i)))
+	while (!(*str >= '0' && *str <= '9'))
 	{
-		res = res * 10 + (*(str + i) - '0');
-		i++;
+		dec = dec * 10 + (*str - '0');
+		str++;
+	}
+	while (dec != 0)
+	{
+		if (dec % size == 0)
+			i *= 10;
+		else
+			res = res + i * (base[dec % size] - '0');
+		dec /= i;
+		i *= 10;
 	}
 	return (res);
 }
 
-int		ft_atoi(char *str)
+int		ft_atoi_base(char *str, char *base)
 {
 	int	sign;
+	int	size;
 
+	size = ft_strlen(base);
+	if (size < 2)
+		return (0);
 	sign = 1;
 	while (*str != '\0')
 	{
-		if (is_space(*str) || is_sign(*str))
-			sign = is_sign(*str) == 2 ? sign * -1 : sign;
-		else if (is_num(*str))
-		{
-			return (sign * get_integer(str));
-		}
+		if ((*str == '\t' || *str == '\n' || *str == '\v' ||
+			*str == '\f' || *str == '\r' || *str == ' ') ||
+			(*str == '+' || *str == '-'))
+			sign = *str == '-' ? sign * -1 : sign;
+		else if (*str >= '0' && *str <= '9')
+			return (sign * basify(str, base, size));
 		str++;
 	}
 	return (0);
