@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 15:29:39 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 12:10:28 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/12 15:58:42 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,12 @@ void				prt_base(unsigned int n, char *base, unsigned int b_size)
 	unsigned int	i;
 
 	n_size = intlen(n, b_size);
-	while (1)
+	while (n_size != 0)
 	{
 		i = power(b_size, n_size);
 		c = base[n / i];
 		write(1, &c, 1);
 		n %= i;
-		if (n_size == 0)
-			break ;
 		n_size--;
 	}
 }

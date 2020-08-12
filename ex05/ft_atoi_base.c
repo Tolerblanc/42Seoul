@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 19:49:09 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 12:33:03 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/12 16:00:09 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		get_integer(char *str)
 
 	i = 0;
 	res = 0;
-	while (is_num(*(str + i)))
+	while (*(str + i) >= '0' && *(str + i) <= '9')
 	{
 		res = res * 10 + (*(str + i) - '0');
 		i++;
@@ -49,7 +49,7 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-int		baseify(char *str, char *base, int size)
+int		basify(char *str, char *base, int size)
 {
 	int	dec;
 	int res;
