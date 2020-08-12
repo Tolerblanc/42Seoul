@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 15:01:16 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 23:18:45 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/13 02:28:44 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,16 @@ int		ft_atoi(char *str)
 	int	sign;
 
 	sign = 1;
+	while (is_space((*str)))
+		str++;
+	while (is_sign(*str))
+	{
+		sign = is_sign(*str) == 2 ? sign * -1 : sign;
+		str++;
+	}
 	while (*str != '\0')
 	{
-		if (is_space(*str) || is_sign(*str))
-			sign = is_sign(*str) == 2 ? sign * -1 : sign;
-		else if (!is_num(*str))
+		if (!is_num(*str))
 			return (0);
 		else if (is_num(*str))
 			return (sign * get_integer(str));
