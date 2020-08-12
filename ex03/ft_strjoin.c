@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 20:43:56 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 21:28:09 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/13 04:11:58 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,12 @@ char		*ft_strjoin(int size, char **strs, char *sep)
 	int		j;
 	int		k;
 
+	if (size == 0)
+	{
+		ret = (char *)malloc(sizeof(char));
+		*ret = "";
+		return (ret);
+	}
 	s = ft_strsize(size, strs, sep);
 	ret = (char *)malloc(sizeof(char) * (++s));
 	i = 0;
