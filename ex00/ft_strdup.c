@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 20:16:31 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 20:24:17 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/12 20:39:09 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strdup(char *src)
 
 	while (*(src + len) != '\0')
 		len++;
-	str = (char *)malloc(sizeof(char *) * len + 1);
+	str = (char *)malloc(sizeof(char) * len + 1);
 	i = 0;
 	while (*(src + i) != '\0')
 	{
