@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 17:17:37 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/13 03:50:58 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/13 05:23:20 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,3 @@ int			ft_ten_queens_puzzle(void)
 	queen(0);
 	return (g_cnt);
 }
-
