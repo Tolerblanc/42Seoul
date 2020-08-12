@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 19:49:09 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/13 04:28:20 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/13 04:43:08 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,17 +90,11 @@ int		ft_atoi_base(char *str, char *base)
 	if (size < 2)
 		return (0);
 	sign = 1;
-	while (1)
-	{
-		if (!(*str == '\t' || *str == '\n' || *str == '\v' ||
+	while ((*str == '\t' || *str == '\n' || *str == '\v' ||
 			*str == '\f' || *str == '\r' || *str == ' '))
-			break ;
 		str++;
-	}
-	while (1)
+	while ((*str == '+' || *str == '-'))
 	{
-		if (!(*str == '+' || *str == '-'))
-			break ;
 		sign = *str == '-' ? sign * -1 : sign;
 		str++;
 	}
