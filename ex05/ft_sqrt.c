@@ -6,22 +6,18 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 16:31:29 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/13 05:09:27 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/13 19:17:00 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int nb)
+int				ft_sqrt(int nb)
 {
-	int	i;
+	long long	i;
 
-	if (nb == 1)
-		return (1);
+	if (nb <= 0)
+		return (0);
 	i = 1;
-	while (i - 1 < nb / 2)
-	{
-		if (i * i == nb)
-			return (i);
-		i++;
-	}
-	return (0);
+	while (i * i < nb)
+		++i;
+	return (i * i == nb ? 1 : 0);
 }
