@@ -6,26 +6,24 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 16:37:08 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/15 00:48:41 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/16 21:03:46 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int				ft_is_prime(int nb)
 {
-	long long	i;
+	int			i;
+	int			temp;
 
 	if (nb <= 1)
 		return (0);
-	if (nb <= 3)
-		return (1);
-	if (!(nb % 2 && nb % 3))
-		return (0);
-	i = 5;
-	while (i * i <= nb)
+	i = 2;
+	temp = nb / 2;
+	while (i <= temp && i <= 65536)
 	{
-		if (!(nb % i && nb % (i + 2)))
+		if (nb % i == 0)
 			return (0);
-		i += 6;
+		i++;
 	}
 	return (1);
 }
@@ -35,7 +33,7 @@ int				ft_find_next_prime(int nb)
 	int			i;
 
 	i = nb;
-	while (ft_is_prime(nb) == 0)
+	while (ft_is_prime(i) == 0)
 		i++;
 	return (i);
 }
