@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 16:37:08 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/13 21:10:16 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/15 00:48:41 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int				ft_find_next_prime(int nb)
 	int			i;
 
 	i = nb;
-	while (is_prime(nb) == 0)
+	while (ft_is_prime(nb) == 0)
 		i++;
 	return (i);
 }
