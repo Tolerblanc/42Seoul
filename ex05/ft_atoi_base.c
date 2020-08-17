@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 19:49:09 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/13 05:32:03 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/17 18:07:33 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,30 @@ int		chk_base(char c, char *base, int size)
 			return (i);
 		i++;
 	}
-	return (0);
+	return (-1);
 }
 
 int		basify(char *str, char *base, int size)
 {
+	int	i;
 	int	dec;
 	int	len_str;
+	int	temp;
 
+	i = 0;
 	dec = 0;
-	len_str = ft_strlen(str);
-	while (*str != '\0')
+	len_str = 0;
+	while (chk_base(str[i], base, size) >= 0 && str[i] != '\0')
 	{
-		dec += ft_power(size, len_str - 1) * chk_base(*str, base, size);
-		str++;
+		i++;
+		len_str++;
+	}
+	i = 0;
+	temp = len_str;
+	while (i < temp)
+	{
+		dec += ft_power(size, len_str - 1) * chk_base(str[i], base, size);
+		i++;
 		len_str--;
 	}
 	return (dec);
@@ -98,11 +108,7 @@ int		ft_atoi_base(char *str, char *base)
 		sign = *str == '-' ? sign * -1 : sign;
 		str++;
 	}
-	while (*str != '\0')
-	{
-		if (chk_base(*str, base, size))
-			return (sign * basify(str, base, size));
-		str++;
-	}
+	if (chk_base(*str, base, size))
+		return (sign * basify(str, base, size));
 	return (0);
 }

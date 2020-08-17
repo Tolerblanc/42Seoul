@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 15:29:39 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/12 23:45:49 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/17 17:29:42 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ unsigned int		ft_strlen(char *str)
 	while (*(str + i) != '\0')
 	{
 		i++;
-		if (*(str + i) == '+' || *(str + i) == '-')
+		if (*(str + i) == '+' || *(str + i) == '-' || *(str + i) == ' ')
 			return (0);
 		j = 0;
 		while (*(str + j) != '\0')
