@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:46:09 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/17 15:51:41 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/18 10:56:55 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,26 +61,26 @@ void		ft_putnbr(int nb)
 		prt_integer(nb);
 }
 
-void        ft_prtstr(char *str)
+void		ft_prtstr(char *str)
 {
-    while (*str)
-    {
-        write(1, str, 1);
-        str++;
-    }
-    write(1, "\n", 1);
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+	write(1, "\n", 1);
 }
 
-void        ft_show_tab(struct s_stock_str *par)
+void		ft_show_tab(struct s_stock_str *par)
 {
-    int     i;
+	int		i;
 
-    i = 0;
-    while (par[i].str)
-    {
-        ft_prtstr(par[i].str);
-        ft_putnbr(par[i].size);
-        ft_prtstr(par[i].copy);
-        i++;
-    }
+	i = 0;
+	while (par[i].str)
+	{
+		ft_prtstr(par[i].str);
+		ft_putnbr(par[i].size);
+		ft_prtstr(par[i].copy);
+		i++;
+	}
 }

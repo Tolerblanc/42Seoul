@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:16:25 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/17 15:44:23 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/18 10:54:54 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ char				*ft_strcpy(char *str, int size)
 		res[i] = str[i];
 		i++;
 	}
-	res[i]= 0;
+	res[i] = 0;
 	return (res);
 }
 
 t_stock_str			*get_tab(t_stock_str *ret, char *av)
 {
-	ret -> str = av;
-	ret -> size = ft_strlen(av);
-	ret -> copy = ft_strcpy(av, ret -> size);
-	if (ret -> copy == 0)
+	ret->str = av;
+	ret->size = ft_strlen(av);
+	ret->copy = ft_strcpy(av, ret->size);
+	if (ret->copy == 0)
 		return (0);
 	return (ret);
 }
@@ -64,7 +64,7 @@ void				free_tab(t_stock_str *tab, int size)
 	free(tab);
 }
 
-struct s_stock_str  *ft_strs_to_tab(int ac, char **av)
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	t_stock_str		*ret;
 	t_stock_str		*temp;
@@ -86,4 +86,3 @@ struct s_stock_str  *ft_strs_to_tab(int ac, char **av)
 	}
 	return (ret);
 }
-
