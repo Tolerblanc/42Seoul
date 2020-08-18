@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:16:25 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/18 10:54:54 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/18 13:11:53 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,45 +23,18 @@ int					ft_strlen(char *str)
 	return (i);
 }
 
-char				*ft_strcpy(char *str, int size)
-{
-	char			*res;
-	int				i;
-
-	res = (char *)malloc(sizeof(char) * (size + 1));
-	if (res == 0)
-		return (0);
-	i = 0;
-	while (str[i])
-	{
-		res[i] = str[i];
-		i++;
-	}
-	res[i] = 0;
-	return (res);
-}
-
-t_stock_str			*get_tab(t_stock_str *ret, char *av)
-{
-	ret->str = av;
-	ret->size = ft_strlen(av);
-	ret->copy = ft_strcpy(av, ret->size);
-	if (ret->copy == 0)
-		return (0);
-	return (ret);
-}
-
-void				free_tab(t_stock_str *tab, int size)
+char				*ft_strcpy(char *dest, char *src)
 {
 	int				i;
 
 	i = 0;
-	while (i < size)
+	while (src[i])
 	{
-		free(tab[i].copy);
+		dest[i] = src[i];
 		i++;
 	}
-	free(tab);
+	dest[i] = 0;
+	return (dest);
 }
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
@@ -76,13 +49,13 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		return (0);
 	while (i < ac)
 	{
-		temp = get_tab(ret + i, *(av + i));
-		if (temp == 0)
-		{
-			free_tab(ret, i);
-			return (0);
-		}
+		ret[i].size = ft_strlen(av[i]);
+		ret[i].str = (char *)malloc(ret[i].size + 1);
+		ret[i].copy = (char *)malloc(ret[i].size + 1);
+		ft_strcpy(ret[i].str, av[i]);
+		ft_strcpy(ret[i].copy, av[i]);
 		i++;
 	}
+	ret[i].str = 0;
 	return (ret);
 }

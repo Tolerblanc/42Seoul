@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:46:09 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/18 10:56:55 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/18 13:11:55 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void		ft_putnbr(int nb)
 	}
 	else
 		prt_integer(nb);
+	write(1, "\n", 1);
 }
 
 void		ft_prtstr(char *str)
