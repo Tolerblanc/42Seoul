@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:16:25 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/18 13:11:53 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/19 01:48:12 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ char				*ft_strcpy(char *dest, char *src)
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	t_stock_str		*ret;
-	t_stock_str		*temp;
 	int				i;
 
 	i = 0;
