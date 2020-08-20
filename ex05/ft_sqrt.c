@@ -3,25 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 16:31:29 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/15 00:47:47 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/20 23:24:13 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_sqrt(int nb)
+int				ft_sqrt(int nb)
 {
-	int		n;
+	long long	i;
 
-	if (nb == 1)
-		return (1);
-	n = 0;
-	while (n <= nb / 2)
-	{
-		if (n * n == nb)
-			return (n);
-		n++;
-	}
+	if (nb <= 0)
+		return (0);
+	i = 1;
+	while (i * i < nb)
+		++i;
+	if (i * i == nb)
+		return (i);
 	return (0);
 }
