@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/15 00:01:19 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/17 17:37:32 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/20 23:06:35 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,10 @@ char			**ft_split(char *str, char *charset)
 	char		**ret;
 
 	i = 0;
-	ret = (char **)malloc(sizeof(char *) * (word_len(str, charset)) + 1);
+	ret = (char **)malloc(sizeof(char *) * (word_len(str, charset) + 1));
 	while (*(str + i))
 	{
-		if ((is_charset(*(str + i), charset) || !*(str + i + 1)))
+		if ((chk_charset(*(str + i), charset) || !*(str + i + 1)))
 		{
 			if (g_strcnt == i)
 			{
@@ -98,8 +98,6 @@ char			**ft_split(char *str, char *charset)
 				i++;
 				continue;
 			}
-			if (!*(str + i + 1))
-				i++;
 			ret[g_retidx++] = get_str(str, i++, &g_strcnt);
 			continue;
 		}
