@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyunjuki <hyunjuki@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/15 00:01:19 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/18 00:39:25 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/20 16:14:59 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,10 @@ char			**ft_split(char *str, char *charset)
 	char		**ret;
 
 	i = 0;
-	ret = (char **)malloc(sizeof(char *) * (word_len(str, charset)) + 1);
+	ret = (char **)malloc(sizeof(char *) * (word_len(str, charset) + 1));
 	while (*(str + i))
 	{
-		if ((is_charset(*(str + i), charset) || !*(str + i + 1)))
+		if ((chk_charset(*(str + i), charset) || !*(str + i + 1)))
 		{
 			if (g_strcnt == i)
 			{
