@@ -1,35 +1,25 @@
-AR = ar
-ARFLAGS = rc
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -c
+
+SRCDIR = srcs
+INCDIR = includes
 
 TARGET = libft.a
+SOURCES = $(SRCDIR)/ft_putchar.c $(SRCDIR)/ft_swap.c $(SRCDIR)/ft_putstr.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_strcmp.c
+OBJECTS = $(SOURCES:.c=.o)
 
-INCLUDES_DIR = ./includes
-INCLUDES = ft.h
+all: $(TARGET)
 
-SRCS_DIR = ./srcs
+%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@ -I $(INCDIR)
+	
+$(TARGET): $(OBJECTS)
+	ar cr $@ $(OBJECTS)
 
-SRC = ft_putchar.c \
-	ft_swap.c \
-	ft_putchar.c \
-	ft_strlen.c \
-	ft_strcmp.c
+clean:
+	rm -f $(OBJECTS)
 
-OBJS = $(addprefix $(SRCS_DIR)/, $(SRC:.c=.o))
-
-all : $(TARGET)
-
-clean :
-	rm -f $(OBJS)
-
-fclean : clean
+fclean: clean
 	rm -f $(TARGET)
 
-re : fclean all
-
-$(TARGET) : $(addprefix $(INCLUDES_DIR)/, $(INCLUDES)) $(OBJS)
-	$(AR) $(ARFLAGS) $@ $^
-
-.c.o :
-	$(CC) $(CFALGS) -I $(INCLUDES_DIR) -c $< -o $(<:.c=.o)
+re: fclean all
