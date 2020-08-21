@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/15 00:01:19 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/08/20 23:05:13 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/08/21 02:22:13 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ char			**ft_split(char *str, char *charset)
 				i++;
 				continue;
 			}
+			if (!*(str + i + 1) && !chk_charset(*(str + i), charset))
+				i++;
 			ret[g_retidx++] = get_str(str, i++, &g_strcnt);
 			continue;
 		}
