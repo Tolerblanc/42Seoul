@@ -1,0 +1,4 @@
+*.out
+main.c
+test.c
+.DS_Store
