@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 19:51:34 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 11:28:32 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/14 11:40:10 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isalnum(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t 	ft_strlcat(char *dst, const char *src, size_t dstsize);

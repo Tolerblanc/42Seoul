@@ -6,9 +6,11 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:27:46 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 11:31:22 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/14 11:33:30 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
