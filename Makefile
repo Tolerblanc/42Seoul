@@ -16,7 +16,12 @@ bonus:
 all:
 
 clean:
+	rm -f $(NAME)
 
-flean:
+fclean:
+	rm -f $(NAME)
+	rm -f $(OBJS)
 
 re:
+	fclean
+	all
