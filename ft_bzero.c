@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 12:46:18 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 12:51:50 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/14 14:12:49 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		*((unsigned char *)(s + i)) = 0;
-		i++;
-	}
+	ft_memset(s, 0, n);
 }
