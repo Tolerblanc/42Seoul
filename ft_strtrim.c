@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 16:18:31 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 16:53:25 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 16:01:50 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,13 @@ char			*ft_strtrim(char const *s1, char const *set)
 	size_t		front;
 	size_t		back;
 	char		*ret;
-	int			i;
 
 	front = 0;
 	back = ft_strlen(s1) - 1;
 	if (!s1)
 		return (ft_strdup(""));
 	if (!set)
-		return (s1);
+		return ((char *)s1);
 	while (ainstr(*(s1 + front), set))
 		front++;
 	while (ainstr(*(s1 + back), set))

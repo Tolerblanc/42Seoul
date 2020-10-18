@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:44:16 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 11:53:52 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 16:00:35 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (i < len && haystack[i])
 	{
 		if (chkstr(haystack + i, needle))
-			return (haystack + i);
+			return ((char *)(haystack + i));
 		i++;
 	}
 	return ((void *)0);
