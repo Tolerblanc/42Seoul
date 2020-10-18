@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 17:31:58 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 12:36:20 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 16:08:43 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = lst;
+	new->next = *lst;
 }
