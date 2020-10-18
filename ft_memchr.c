@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 14:51:50 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 15:52:48 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:53:30 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ void				*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	ch;
+	size_t			i;
 
 	p = (unsigned char *)s;
 	ch = (unsigned char)c;
+	i = 0;
 	while (n--)
 	{
-		if (*p++ == ch)
-			return ((void *)p);
+		if (p[i] == ch)
+			return (p + i);
+		i++;
 	}
 	return (NULL);
 }

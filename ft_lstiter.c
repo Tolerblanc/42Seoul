@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 18:12:08 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 18:13:25 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:23:30 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst->next)
+	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;

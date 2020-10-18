@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 14:04:30 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 15:36:06 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 16:54:08 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void			getstr(char *s, char c, size_t word, char **ret)
 
 	i = 0;
 	curr = 0;
+	while (s[curr] == c)
+		curr++;
 	while (s[curr] && i < word)
 	{
 		len = wordlen(s, curr, c);

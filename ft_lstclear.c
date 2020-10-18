@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 17:47:13 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 18:09:20 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:23:51 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*tmp1;
-	t_list	*tmp2;
+	t_list	*temp;
 
-	tmp1 = *lst;
-	tmp2 = (*lst)->next;
-	if (!tmp1)
-		lst = NULL;
-	else if (!tmp2)
+	if (lst == 0 || del == 0)
+		return ;
+	while (*lst)
 	{
-		ft_lstdelone(tmp1, del);
-		lst = NULL;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
-	else
-	{
-		while (tmp2)
-		{
-			ft_lstdelone(tmp1, del);
-			tmp1 = tmp2;
-			tmp2 = tmp2->next;
-		}
-		if (tmp1)
-			ft_lstdelone(tmp1, del);
-		lst = NULL;
-	}
+	*lst = 0;
 }

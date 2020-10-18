@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 12:34:04 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 12:59:51 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 18:29:26 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ char		*ft_strdup(const char *s1)
 	char	*ret;
 
 	i = ft_strlen(s1);
-	ret = (char *)malloc(sizeof(char) * i);
+	ret = (char *)malloc(sizeof(char) * i + 1);
 	if (ret == 0)
 		return (ret);
-	while (*s1)
-		*ret++ = *s1++;
-	*ret = '\0';
+	ft_memcpy(ret, s1, i);
+	ret[i] = '\0';
 	return (ret);
 }

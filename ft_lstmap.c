@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 11:15:45 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 11:25:37 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:22:08 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&head, del);
 			return (NULL);
 		}
-		curr = next;
+		curr = curr->next;
 		next = next->next;
 	}
 	return (head);

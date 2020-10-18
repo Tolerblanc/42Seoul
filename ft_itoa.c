@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 11:46:13 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 12:28:26 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:06:18 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,18 @@ static int	intlen(int n)
 	return (len);
 }
 
+static int	absol(int n)
+{
+	return (n < 0 ? -n : n);
+}
+
 static int	abs_power(int n, int p)
 {
 	int ret;
 
 	if (p == 0)
 		return (1);
-	p = p < 0 ? -p : p;
+	p = absol(p);
 	ret = 1;
 	while (p)
 	{
@@ -61,7 +66,7 @@ char		*ft_itoa(int n)
 	s[size] = '\0';
 	while (temp)
 	{
-		s[i] = n / temp + '0';
+		s[i] = absol(n / temp) + '0';
 		n %= temp;
 		temp /= 10;
 		i++;

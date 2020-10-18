@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 12:43:17 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 12:53:10 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:28:00 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ void		*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
 
-	p = malloc(count * size);
-	if (p == 0)
-		return (p);
-	ft_bzero(p, sizeof(p));
+	if (!(p = (void *)malloc(count * size)))
+		return (NULL);
+	ft_memset(p, 0, count * size);
 	return (p);
 }
