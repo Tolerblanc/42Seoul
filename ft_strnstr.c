@@ -6,37 +6,30 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:44:16 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 18:13:22 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 18:47:29 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	chkstr(const char *str, const char *target, size_t curr,
-	size_t limit)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;
+	size_t i;
+	size_t j;
 
+	if (needle[0] == 0)
+		return ((char *)haystack);
 	i = 0;
-	while (str[curr + i] && target[i] && curr + i < limit)
+	while (haystack[i] && i < len)
 	{
-		if (str[curr + i] != target[i])
-			return (0);
+		j = 0;
+		while (haystack[i + j] == needle[j] && i + j < len)
+		{
+			j++;
+			if (needle[j] == 0)
+				return ((char *)haystack + i);
+		}
 		i++;
 	}
-	return ((target[i] || curr + i >= limit) ? 0 : 1);
-}
-
-char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < len && haystack[i])
-	{
-		if (chkstr(haystack, needle, i, len))
-			return ((char *)(haystack + i));
-		i++;
-	}
-	return (NULL);
+	return (0);
 }

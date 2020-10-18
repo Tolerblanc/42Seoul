@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 14:04:30 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 16:54:08 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 19:12:59 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	word = word_count((char *)s, c);
-	if ((ret = (char **)malloc(sizeof(char *) * word + 1)) == NULL)
+	if ((ret = (char **)malloc(sizeof(char *) * (word + 1))) == NULL)
 		return (NULL);
 	i = 0;
 	ret[word] = NULL;
