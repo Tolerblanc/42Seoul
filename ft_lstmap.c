@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 11:15:45 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/18 19:29:28 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/19 16:50:19 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*curr;
 	t_list	*next;
 
-	if (f == 0 || del == 0)
-		return (NULL);
 	if (lst == NULL || (head = ft_lstnew(f(lst->content))) == NULL)
 		return (NULL);
 	curr = head;
