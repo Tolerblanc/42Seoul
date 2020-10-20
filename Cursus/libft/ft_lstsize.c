@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 17:34:33 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 17:36:36 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 17:16:15 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_lstsize(t_list *lst)
 	int	ret;
 
 	ret = 0;
-	while (lst->next)
+	while (lst)
 	{
 		ret++;
 		lst = lst->next;

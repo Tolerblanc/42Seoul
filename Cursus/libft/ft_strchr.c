@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:27:46 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 11:33:30 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 15:53:51 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
-	return (*s == c ? s : (void *)0);
+	return (*s == c ? (char *)s : NULL);
 }

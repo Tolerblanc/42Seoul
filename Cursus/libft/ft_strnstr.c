@@ -6,32 +6,30 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 11:44:16 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 11:53:52 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/10/18 18:47:29 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	chkstr(const char *str, const char *target)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	while (*str && *target)
-	{
-		if (*str++ != *target++)
-			return (0);
-	}
-	return (*target ? 0 : 1);
-}
+	size_t i;
+	size_t j;
 
-char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	size_t	i;
-
+	if (needle[0] == 0)
+		return ((char *)haystack);
 	i = 0;
-	while (i < len && haystack[i])
+	while (haystack[i] && i < len)
 	{
-		if (chkstr(haystack + i, needle))
-			return (haystack + i);
+		j = 0;
+		while (haystack[i + j] == needle[j] && i + j < len)
+		{
+			j++;
+			if (needle[j] == 0)
+				return ((char *)haystack + i);
+		}
 		i++;
 	}
-	return ((void *)0);
+	return (0);
 }

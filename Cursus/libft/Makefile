@@ -10,7 +10,7 @@ SRCS = ./ft_atoi.c \
 			./ft_isascii.c \
 			./ft_isdigit.c \
 			./ft_isprint.c \
-			./ft_isprint.c 
+			./ft_isprint.c \
 			./ft_itoa.c \
 			./ft_memchr.c \
 			./ft_memcmp.c \
@@ -33,7 +33,7 @@ SRCS = ./ft_atoi.c \
 			./ft_strlcpy.c \
 			./ft_strlen.c \
 			./ft_strmapi.c \
-			./ft_strncpm.c \
+			./ft_strncmp.c \
 			./ft_strnstr.c \
 			./ft_strrchr.c \
 			./ft_strrchr.c \
@@ -56,7 +56,7 @@ OBJS = $(SRCS:.c=.o)
 BONUSOBJS = $(BONUSES:.c=.o)
 
 %.o : %.c
-	$(CC) $(CFLAGS) $< -o $@ -I .
+	$(CC) $(CFLAGS) -I . -c $< -o $@
 
 $(NAME) : $(OBJS)
 	$(LIBC) $(NAME) $(OBJS)
@@ -70,7 +70,7 @@ clean:
 	rm -f $(OBJS) $(BONUSOBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(bonus)
 
 re: fclean all
 
