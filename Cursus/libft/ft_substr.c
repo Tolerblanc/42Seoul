@@ -6,7 +6,7 @@
 /*   By: hyunjuki <hyunjuki@42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 15:11:12 by hyunjuki          #+#    #+#             */
-/*   Updated: 2020/10/14 16:49:48 by hyunjuki         ###   ########.fr       */
+/*   Updated: 2020/11/09 16:52:45 by hyunjuki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ char				*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!(ret = (char *)malloc(len + 1)))
 		return (NULL);
 	if (ft_strlen(s) < start)
+	{
+		free(ret);
 		return (ft_strdup(""));
+	}
 	while (len-- && *s)
 		ret[i++] = *(s + start++);
 	ret[i] = '\0';
