@@ -6,9 +6,9 @@
 &nbsp;
 | Subject         | Summary             | date | Score | 
 |-------------------|-------------------|------|-------| 
-|C Piscine Shell 00 | Learning Basic Shell (1)  |2020.07.29| <span style="color:green">100/100|
+|C Piscine Shell 00 | Learning Basic Shell (1)  |2020.07.29| <span style="color:green"> 100/100 <\span>|
 |C Piscine Shell 01 | Learning Basic Shell (2)  |2020.08.01| <span style="color:green">100/100|
-|C Piscine C 00 | C Basic : write() function  |2020.08.05| <span style="color:green">s97/100|
+|C Piscine C 00 | C Basic : write() function  |2020.08.05| <span style="color:green">97/100|
 |C Piscine C 01 | C Basic : Pointer           |2020.08.05| <span style="color:green">100/100|
 |C Piscine C 02 | C Basic : Recode Functions in <string.h> (1)  |2020.08.10| <span style="color:green">75 /100|
 |C Piscine C 03 | C Basic : Recode Functions in <string.h> (2)  |2020.08.10| <span style="color:green">100/100|
