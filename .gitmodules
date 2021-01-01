@@ -1,0 +1,3 @@
+[submodule "Cursus/get_next_line"]
+	path = Cursus/get_next_line
+	url = https://github.com/Tolerblanc/get_next_line.git
