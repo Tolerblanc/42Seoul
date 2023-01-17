@@ -10,3 +10,6 @@
 [submodule "Cursus/Curcle 2/ft_server"]
 	path = Cursus/Curcle 2/ft_server
 	url = https://github.com/Tolerblanc/ft_server.git
+[submodule "Cursus/Curcle 2/minitalk"]
+	path = Cursus/Curcle 2/minitalk
+	url = https://github.com/Tolerblanc/minitalk.git
