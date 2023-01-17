@@ -13,3 +13,6 @@
 [submodule "Cursus/Curcle 2/minitalk"]
 	path = Cursus/Curcle 2/minitalk
 	url = https://github.com/Tolerblanc/minitalk.git
+[submodule "Cursus/Curcle 1/netwhat"]
+	path = Cursus/Curcle 1/netwhat
+	url = https://github.com/Tolerblanc/netwhat.git
