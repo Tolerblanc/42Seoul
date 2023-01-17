@@ -4,3 +4,6 @@
 [submodule "Cursus/Curcle 0/libft-renewal-"]
 	path = Cursus/Curcle 0/libft-renewal-
 	url = https://github.com/Tolerblanc/libft-renewal-.git
+[submodule "Cursus/Curcle 1/ft_printf"]
+	path = Cursus/Curcle 1/ft_printf
+	url = https://github.com/Tolerblanc/ft_printf.git
