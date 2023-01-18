@@ -19,6 +19,3 @@
 [submodule "Cursus/Curcle 1/get_next_line-renewal-"]
     path = Cursus/Curcle 1/get_next_line
     url = https://github.com/Tolerblanc/get_next_line-renewal-.git
-[submodule "get_next_line-renewal-"]
-	path = get_next_line-renewal-
-	url = https://github.com/Tolerblanc/get_next_line-renewal-.git
