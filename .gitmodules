@@ -1,6 +1,3 @@
-[submodule "Cursus/get_next_line"]
-	path = Cursus/get_next_line
-	url = https://github.com/Tolerblanc/get_next_line.git
 [submodule "Cursus/Curcle 0/libft-renewal-"]
 	path = Cursus/Curcle 0/libft-renewal-
 	url = https://github.com/Tolerblanc/libft-renewal-.git
@@ -19,3 +16,9 @@
 [submodule "Cursus/Curcle 1/get_next_line"]
 	path = Cursus/Curcle 1/get_next_line
 	url = https://github.com/Tolerblanc/get_next_line.git
+[submodule "Cursus/Curcle 1/get_next_line-renewal-"]
+    path = Cursus/Curcle 1/get_next_line
+    url = https://github.com/Tolerblanc/get_next_line-renewal-.git
+[submodule "get_next_line-renewal-"]
+	path = get_next_line-renewal-
+	url = https://github.com/Tolerblanc/get_next_line-renewal-.git
