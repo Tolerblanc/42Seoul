@@ -19,3 +19,6 @@
 [submodule "Cursus/Curcle 1/get_next_line-renewal-"]
     path = Cursus/Curcle 1/get_next_line
     url = https://github.com/Tolerblanc/get_next_line-renewal-.git
+[submodule "Cursus/Curcle 2/push_swap"]
+	path = Cursus/Curcle 2/push_swap
+	url = https://github.com/Tolerblanc/push_swap
