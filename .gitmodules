@@ -22,3 +22,9 @@
 [submodule "Cursus/Curcle 2/push_swap"]
 	path = Cursus/Curcle 2/push_swap
 	url = https://github.com/Tolerblanc/push_swap
+[submodule "Cursus/Curcle 3/philosophers"]
+	path = Cursus/Curcle 3/philosophers
+	url = https://github.com/Tolerblanc/philosophers.git
+[submodule "Cursus/Curcle 3/minishell"]
+	path = Cursus/Curcle 3/minishell
+	url = https://github.com/42seoul-H2O/minishell.git
