@@ -28,3 +28,6 @@
 [submodule "Cursus/Curcle 3/minishell"]
 	path = Cursus/Curcle 3/minishell
 	url = https://github.com/42seoul-H2O/minishell.git
+[submodule "Cursus/Curcle 2/so_long"]
+	path = Cursus/Curcle 2/so_long
+	url = https://github.com/Tolerblanc/so_long.git

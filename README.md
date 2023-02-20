@@ -13,6 +13,11 @@
 |ft_server| Basic Docker & Container Knowledge |2021.04.17|100/100|2.54|
 |minitalk| Implement Inter Process Communication |2023.01.09|80/100|2.82|
 |Exam Rank 02| The First Exam of Cursus  |2023.01.10|100/100|2.82|
+|push_swap| Sort deque-like-stack with your own algorithm|2023.01.27|100/100|3.22|
+|so_long| Basic 2D top-down game with MiniLibX|2023.01.30|100/100|3.39|
+|Exam Rank 03| The Second Exam of Cursus |2023.02.14|100/100|3.39|
+|minishell| Make your own SHELL | | | |
+|philosophers| Multi Thread Programming with mutex| | | |
 
 
 &nbsp;
