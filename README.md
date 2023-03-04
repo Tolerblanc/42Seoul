@@ -1,4 +1,4 @@
-# 42Seoul 저장소  
+# 42Seoul Repository  
   
 &nbsp;  
 
@@ -16,8 +16,8 @@
 |push_swap| Sort deque-like-stack with your own algorithm|2023.01.27|100/100|3.22|
 |so_long| Basic 2D top-down game with MiniLibX|2023.01.30|100/100|3.39|
 |Exam Rank 03| The Second Exam of Cursus |2023.02.14|100/100|3.39|
-|minishell| Make your own SHELL | | | |
-|philosophers| Multi Thread Programming with mutex| | | |
+|minishell| Make your own SHELL |2023.02.22|100/100|3.88|
+|philosophers| Multi Thread Programming with mutex|2023.03.03|100/100|4.16|
 
 
 &nbsp;
