@@ -31,3 +31,21 @@
 [submodule "Cursus/Curcle 2/so_long"]
 	path = Cursus/Curcle 2/so_long
 	url = https://github.com/Tolerblanc/so_long.git
+[submodule "Cursus/Curcle 4/CPP_Module00"]
+	path = Cursus/Curcle 4/CPP_Module00
+	url = https://github.com/Tolerblanc/CPP_Module00.git
+[submodule "Cursus/Curcle 4/CPP_Module01"]
+	path = Cursus/Curcle 4/CPP_Module01
+	url = https://github.com/Tolerblanc/CPP_Module01.git
+[submodule "Cursus/Curcle 4/CPP_Module02"]
+	path = Cursus/Curcle 4/CPP_Module02
+	url = https://github.com/Tolerblanc/CPP_Module02.git
+[submodule "Cursus/Curcle 4/CPP_Module03"]
+	path = Cursus/Curcle 4/CPP_Module03
+	url = https://github.com/Tolerblanc/CPP_Module03.git
+[submodule "Cursus/Curcle 4/CPP_Module04"]
+	path = Cursus/Curcle 4/CPP_Module04
+	url = https://github.com/Tolerblanc/CPP_Module04.git
+[submodule "Cursus/Curcle 4/cub3D"]
+	path = Cursus/Curcle 4/cub3D
+	url = https://github.com/42Seoul-H2O/cub3D.git
