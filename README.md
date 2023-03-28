@@ -6,22 +6,24 @@
 &nbsp;
 | Subject         | Summary             | date | Score | Level |
 |-------------------|-------------------|------|-------|-------|
-|libft | Recode original C library   |2020.10.20|103/100|1.00|
-|get_next_line | file IO with static variables  |2020.12.30|100/100|1.40|
-|ft_printf| Recode printf() |2021.03.04|100/100|1.79|
+|libft | Recode Clib & your own library  |2020.10.20|103/100|1.00|
+|get_next_line | Read File Descriptor & static variables  |2020.12.30|100/100|1.40|
+|ft_printf| Recode printf() : variable arguments |2021.03.04|100/100|1.79|
 |netwhat| Basic Network Knowledge |2021.04.04|100/100|2.00|
-|ft_server| Basic Docker & Container Knowledge |2021.04.17|100/100|2.54|
-|minitalk| Implement Inter Process Communication |2023.01.09|80/100|2.82|
-|Exam Rank 02| The First Exam of Cursus  |2023.01.10|100/100|2.82|
-|push_swap| Sort deque-like-stack with your own algorithm|2023.01.27|100/100|3.22|
-|so_long| Basic 2D top-down game with MiniLibX|2023.01.30|100/100|3.39|
-|Exam Rank 03| The Second Exam of Cursus |2023.02.14|100/100|3.39|
-|minishell| Make your own SHELL |2023.02.22|100/100|3.88|
-|philosophers| Multi Thread Programming with mutex|2023.03.03|100/100|4.16|
+|ft_server| Basic Docker Container Usage |2021.04.17|100/100|2.54|
+|minitalk| Implement Inter Process Communication with 2 User signals |2023.01.09|80/100|2.82|
+|Exam Rank 02| The 1st Exam on Cursus : mini_printf  |2023.01.10|100/100|2.82|
+|push_swap| Sorting with your own algorithm by using 2 deque-like-stack |2023.01.27|100/100|3.22|
+|so_long| Make basic 2d game with MiniLibX |2023.01.30|100/100|3.39|
+|Exam Rank 03| The 2nd Exam on Cursus : minipaint |2023.02.14|100/100|3.39|
+|minishell| Make your own SHELL : multi processing |2023.02.22|100/100|3.88|
+|philosophers| Dining philosophers problem : multi threading |2023.03.03|100/100|4.16|
 |CPP Module 00| Namespace, Class, Member functions, STDIO streams|2023.03.15|100/100|4.16|
 |CPP Module 01| Memory allocation, Member pointers, Reference|2023.03.17|100/100|4.16|
 |CPP Moudle 02| Ad-hoc Polymorphism, Operator overloading, Orthodox Canonical Form|2023.03.24|100/100|4.16|
-|CPP Module 03| Inheritance|- | - | -|
+|CPP Module 03| Inheritance, Multiple Interitance Problem|2023.03.26|100/100|4.16|
+|CPP Module 04| Subtype Polymorphism, Abstract Class, Interfaces |2023.03.28|100/100|4.74|
+|Exam Rank 04 | The 3rd Exam on Cursus : microshell |2023.03.28|100/100|4.74|
 
 &nbsp;
 &nbsp;
