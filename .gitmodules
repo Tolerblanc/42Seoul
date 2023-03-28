@@ -46,6 +46,3 @@
 [submodule "Cursus/Curcle 4/CPP_Module04"]
 	path = Cursus/Curcle 4/CPP_Module04
 	url = https://github.com/Tolerblanc/CPP_Module04.git
-[submodule "Cursus/Curcle 4/cub3D"]
-	path = Cursus/Curcle 4/cub3D
-	url = https://github.com/42Seoul-H2O/cub3D.git
