@@ -46,3 +46,21 @@
 [submodule "Cursus/Curcle 4/CPP_Module04"]
 	path = Cursus/Curcle 4/CPP_Module04
 	url = https://github.com/Tolerblanc/CPP_Module04.git
+[submodule "Cursus/Curcle 5/CPP_Module05"]
+	path = Cursus/Curcle 5/CPP_Module05
+	url = https://github.com/Tolerblanc/CPP_Module05.git
+[submodule "Cursus/Curcle 5/CPP_Module06"]
+	path = Cursus/Curcle 5/CPP_Module06
+	url = https://github.com/Tolerblanc/CPP_Module06.git
+[submodule "Cursus/Curcle 5/CPP_Module07"]
+	path = Cursus/Curcle 5/CPP_Module07
+	url = https://github.com/Tolerblanc/CPP_Module07.git
+[submodule "Cursus/Curcle 5/CPP_Module08"]
+	path = Cursus/Curcle 5/CPP_Module08
+	url = https://github.com/Tolerblanc/CPP_Module08.git
+[submodule "Cursus/Curcle 5/CPP_Module09"]
+	path = Cursus/Curcle 5/CPP_Module09
+	url = https://github.com/Tolerblanc/CPP_Module09.git
+[submodule "Cursus/Curcle 4/miniRT"]
+	path = Cursus/Curcle 4/miniRT
+	url = https://github.com/42Seoul-H2O/miniRT.git

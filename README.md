@@ -1,8 +1,9 @@
 # 42Seoul Repository  
   
-&nbsp;  
+
 
 ## 42 Cursus (2020.09.28 ~ )  
+
 &nbsp;
 | Subject         | Summary             | date | Score | Level |
 |-------------------|-------------------|------|-------|-------|
@@ -24,11 +25,16 @@
 |CPP Module 03| Inheritance, Multiple Interitance Problem|2023.03.26|100/100|4.16|
 |CPP Module 04| Subtype Polymorphism, Abstract Class, Interfaces |2023.03.28|100/100|4.74|
 |Exam Rank 04 | The 3rd Exam on Cursus : microshell |2023.03.28|100/100|4.74|
+|miniRT| Implement Basic RayTracing with MiniLibX|2023.05.26|100/100|5.08|
+|CPP Module 05| Repetition and Exceptions|2023.06.25|100/100|5.08|
+|CPP Module 06| C++ Casts : type conversion|2023.06.26|100/100|5.08|
+|CPP Moudle 07| C++ Templates : Generic Programming|2023.06.27|90/100|5.08|
+|CPP Module 08| C++ STL : Templated containers, iterators, algorithms|2023.06.28|100/100|5.08|
+|CPP Module 09| C++ STL : Templated containers, iterators, algorithms|2023.07.04|100/100|5.67|  
 
-&nbsp;
-&nbsp;
 
 ## La Piscine (2020.07.27 ~ 2020.08.21)  
+
 &nbsp;
 | Subject         | Summary             | date | Score | 
 |-------------------|-------------------|------|-------| 
@@ -50,9 +56,7 @@
 |C Piscine Exam 01 | The Second Exam of C Piscine                |2020.08.07|64/100|
 |C Piscine Exam 02 | The Third Exam of C Piscine                |2020.08.14|84/100|
 |C Piscine Final Exam | The Final Exam of C Piscine                |2020.09.18|66/100|
-*********************************************************************************
-&nbsp;
-
+*********************************************************************************  
 
 
 
