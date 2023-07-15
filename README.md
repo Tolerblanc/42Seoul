@@ -28,7 +28,7 @@
 |miniRT| Implement Basic RayTracing with MiniLibX|2023.05.26|100/100|5.08|
 |CPP Module 05| Repetition and Exceptions|2023.06.25|100/100|5.08|
 |CPP Module 06| C++ Casts : type conversion|2023.06.26|100/100|5.08|
-|CPP Moudle 07| C++ Templates : Generic Programming|2023.06.27|90/100|5.08|
+|CPP Moudle 07| C++ Templates : Generic Programming|2023.06.27|100/100|5.08|
 |CPP Module 08| C++ STL : Templated containers, iterators, algorithms|2023.06.28|100/100|5.08|
 |CPP Module 09| C++ STL : Templated containers, iterators, algorithms|2023.07.04|100/100|5.67|  
 
