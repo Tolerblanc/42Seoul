@@ -64,3 +64,6 @@
 [submodule "Cursus/Curcle 4/miniRT"]
 	path = Cursus/Curcle 4/miniRT
 	url = https://github.com/42Seoul-H2O/miniRT.git
+[submodule "Cursus/Curcle 5/ft_irc"]
+	path = Cursus/Curcle 5/ft_irc
+	url = https://github.com/42Seoul-IRC/ft_irc.git
