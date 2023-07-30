@@ -25,7 +25,7 @@
 |CPP Module 03| Inheritance, Multiple Interitance Problem|2023.03.26|100/100|4.16|
 |CPP Module 04| Subtype Polymorphism, Abstract Class, Interfaces |2023.03.28|100/100|4.74|
 |Exam Rank 04 | The 3rd Exam on Cursus : microshell |2023.03.28|100/100|4.74|
-|miniRT| Implement Basic RayTracing with MiniLibX|2023.05.26|100/100|5.08|
+|miniRT| Basic RayTracing Implementation with MiniLibX|2023.05.26|100/100|5.08|
 |CPP Module 05| Repetition and Exceptions|2023.06.25|100/100|5.08|
 |CPP Module 06| C++ Casts : type conversion|2023.06.26|100/100|5.08|
 |CPP Moudle 07| C++ Templates : Generic Programming|2023.06.27|100/100|5.08|
