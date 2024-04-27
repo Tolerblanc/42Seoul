@@ -1,19 +1,17 @@
-# 42Seoul Repository  
-  
+# 42Seoul Repository
 
-
-## 42 Cursus (2020.09.28 ~ )  
+## 42 Cursus (2020.09.28 ~ )
 
 &nbsp;
-| Subject         | Summary             | date | Score | Level |
+| Subject | Summary | date | Score | Level |
 |-------------------|-------------------|------|-------|-------|
-|libft | Recode Clib & your own library  |2020.10.20|103/100|1.00|
-|get_next_line | Read File Descriptor & static variables  |2020.12.30|100/100|1.40|
+|libft | Recode Clib & your own library |2020.10.20|103/100|1.00|
+|get_next_line | Read File Descriptor & static variables |2020.12.30|100/100|1.40|
 |ft_printf| Recode printf() : variable arguments |2021.03.04|100/100|1.79|
 |netwhat| Basic Network Knowledge |2021.04.04|100/100|2.00|
 |ft_server| Basic Docker Container Usage |2021.04.17|100/100|2.54|
 |minitalk| Implement Inter Process Communication with 2 User signals |2023.01.09|80/100|2.82|
-|Exam Rank 02| The 1st Exam on Cursus : mini_printf  |2023.01.10|100/100|2.82|
+|Exam Rank 02| The 1st Exam on Cursus : mini_printf |2023.01.10|100/100|2.82|
 |push_swap| Sorting with your own algorithm by using 2 deque-like-stack |2023.01.27|100/100|3.22|
 |so_long| Make basic 2d game with MiniLibX |2023.01.30|100/100|3.39|
 |Exam Rank 03| The 2nd Exam on Cursus : minipaint |2023.02.14|100/100|3.39|
@@ -34,31 +32,31 @@
 |Exam Rank 05 | The 4th Exam on Cursus : cpp_modules |2023.07.25|100/100|5.67|
 |ft_irc| Make your own IRC Server : Socket Programming |2023.07.28|125/100|7.38|
 |Inception| System administration using docker-compose |2023.08.07|100/100|8.30|
+|Exam Rank 06 | The Last Exam on Cursus : miniserv |2023.08.14|100/100|8.30|
+|ft_transcendence | A Real-time Multiplayer Pong Game Webapp with Chat, 42 OAuth.|2023.10.25|100/100|10.67|
 
-## La Piscine (2020.07.27 ~ 2020.08.21)  
+## La Piscine (2020.07.27 ~ 2020.08.21)
 
 &nbsp;
-| Subject         | Summary             | date | Score | 
-|-------------------|-------------------|------|-------| 
-|C Piscine Shell 00 | Learning Basic Shell (1)  |2020.07.29|  100/100 |
-|C Piscine Shell 01 | Learning Basic Shell (2)  |2020.08.01| 100/100|
-|C Piscine C 00 | C Basic : write() function  |2020.08.05| 97/100|
-|C Piscine C 01 | C Basic : Pointer           |2020.08.05| 100/100|
-|C Piscine C 02 | C Basic : Recode Functions in <string.h> (1)  |2020.08.10| 75 /100|
-|C Piscine C 03 | C Basic : Recode Functions in <string.h> (2)  |2020.08.10| 100/100|
-|C Piscine C 04 | C Basic : Recode atoi() and others     |2020.08.18|70/100|
-|C Piscine C 05 | C Basic : Recursives and Ten Queens puzzle  |2020.08.19|100/100|
+| Subject | Summary | date | Score |
+|-------------------|-------------------|------|-------|
+|C Piscine Shell 00 | Learning Basic Shell (1) |2020.07.29| 100/100 |
+|C Piscine Shell 01 | Learning Basic Shell (2) |2020.08.01| 100/100|
+|C Piscine C 00 | C Basic : write() function |2020.08.05| 97/100|
+|C Piscine C 01 | C Basic : Pointer |2020.08.05| 100/100|
+|C Piscine C 02 | C Basic : Recode Functions in <string.h> (1) |2020.08.10| 75 /100|
+|C Piscine C 03 | C Basic : Recode Functions in <string.h> (2) |2020.08.10| 100/100|
+|C Piscine C 04 | C Basic : Recode atoi() and others |2020.08.18|70/100|
+|C Piscine C 05 | C Basic : Recursives and Ten Queens puzzle |2020.08.19|100/100|
 |C Piscine C 06 | C Basic : Command Line Parameters |2020.08.12 | 100/100|
-|C Piscine C 07 | C Basic : Heap Memory Allocation   |2020.08.21|0/100|
+|C Piscine C 07 | C Basic : Heap Memory Allocation |2020.08.21|0/100|
 |C Piscine C 08 | C Basic : Writing Custom Header |2020.08.19 | 100/100|
-|C Piscine C 09 | C Basic : Makefile                        |2020.08.21|100/100|
-|C Piscine Rush 00 | The First Team Project of C Piscine    |2020.08.02| 120/100|
-|C Piscine Rush 01 | The Second Team Project of C Piscine    |2020.08.09| 0/100|
-|C Piscine Exam 00 | The First Exam of C Piscine                |2020.07.31| 64/100|
-|C Piscine Exam 01 | The Second Exam of C Piscine                |2020.08.07|64/100|
-|C Piscine Exam 02 | The Third Exam of C Piscine                |2020.08.14|84/100|
-|C Piscine Final Exam | The Final Exam of C Piscine                |2020.09.18|66/100|
-*********************************************************************************  
+|C Piscine C 09 | C Basic : Makefile |2020.08.21|100/100|
+|C Piscine Rush 00 | The First Team Project of C Piscine |2020.08.02| 120/100|
+|C Piscine Rush 01 | The Second Team Project of C Piscine |2020.08.09| 0/100|
+|C Piscine Exam 00 | The First Exam of C Piscine |2020.07.31| 64/100|
+|C Piscine Exam 01 | The Second Exam of C Piscine |2020.08.07|64/100|
+|C Piscine Exam 02 | The Third Exam of C Piscine |2020.08.14|84/100|
+|C Piscine Final Exam | The Final Exam of C Piscine |2020.09.18|66/100|
 
-
-
+---
